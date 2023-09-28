@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:x_clone/connection_page.dart';
+import 'package:x_clone/page/connection_page.dart';
 
-import 'twitter_page.dart';
+import 'page/twitter_page.dart';
 
 void main() {
   runApp(MyApp());
