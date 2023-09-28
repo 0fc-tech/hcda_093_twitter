@@ -26,7 +26,10 @@ class TwitterPage extends StatelessWidget {
           const TopNavigationTwitter(),
           Text("Bonjour $email",textAlign: TextAlign.start,),
           FutureBuilder<Response>(
-              future: get(Uri.parse("https://raw.githubusercontent.com/Chocolaterie/EniWebService/main/api/tweets.json")),
+              //future: get(Uri.parse("https://raw.githubusercontent.com/Chocolaterie/EniWebService/main/api/tweets.json")),
+              future: get(
+                  Uri.parse("https://raw.githubusercontent.com/Chocolaterie/EniWebService/main/api/tweets.json",),
+              ),
               builder: (context, snapshot) {
                 switch(snapshot.connectionState){
                   case ConnectionState.done:

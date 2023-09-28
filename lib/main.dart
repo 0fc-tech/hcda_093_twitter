@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:x_clone/page/connection_page.dart';
+import 'package:x_clone/page/newtweet_page.dart';
 
 import 'page/twitter_page.dart';
 
@@ -13,8 +14,15 @@ class MyApp extends StatelessWidget {
     initialLocation: "/connection",
     routes: [
       GoRoute(
-          path: "/homepage",
-          builder: (context,state)=> TwitterPage(state.extra as String)
+        path: "/homepage",
+        builder: (context,state)=> TwitterPage(state.extra == null ? "": state.extra as String),
+        routes: [
+          GoRoute(
+            path: 'new',
+            builder: (context,state)=> NewTweetPage(),
+          )
+        ]
+
       ),
       GoRoute(path: "/connection",builder: (context,state)=> ConnectionPage()),
     ]
