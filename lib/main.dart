@@ -11,7 +11,8 @@ void main() {
 
 class MyApp extends StatelessWidget {
   final _router = GoRouter(
-    initialLocation: "/connection",
+    initialLocation: "/homepage",
+    initialExtra: "sd",
     routes: [
       GoRoute(
         path: "/homepage",
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
         routerConfig: _router,
         title: 'Flutter Demo',
         theme: ThemeData(
+
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
           useMaterial3: true,
         )
